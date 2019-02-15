@@ -3,13 +3,15 @@ package br.com.fiap.loja;
 import java.util.Scanner;
 
 import br.com.fiap.loja.bo.EstoqueBO;
+import br.com.fiap.singleton.PropertySingleton;
 
 public class TerminalConsulta {
-	public static void main(String[] args) {
+	
+	
+	public static void main(String[] args) {				
 		EstoqueBO bo = new EstoqueBO();
-		System.out.println(getNomeLoja());
-		System.out.println(bo.getProduto(getCodigo()));
-
+		System.out.println(PropertySingleton.getInstance().getProperty("nome"));
+		System.out.println(bo.toString(bo.getProduto(getCodigo())));
 	} 
 
 	public static int getCodigo() {
@@ -18,9 +20,5 @@ public class TerminalConsulta {
 		int resposta = leitor.nextInt();
 		leitor.close();
 		return resposta;
-	}
-
-	public static String getNomeLoja() {
-		return "Loja";
 	}
 }
