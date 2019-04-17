@@ -30,15 +30,15 @@ public class CarrinhoBean {
 	public List<Forma> getFormasDePagamento(){
 		List<Forma> formas = new ArrayList<Forma>();
 		formas.add(new Forma(1, "Crédito"));
-		formas.add(new Forma(1, "Débito"));
-		formas.add(new Forma(1, "Boleto"));
+		formas.add(new Forma(2, "Débito"));
+		formas.add(new Forma(3, "Boleto"));
 		return formas;
 	}
-	public List<ProdutoBean> getProdutos() {
-		List<ProdutoBean> lista = new ArrayList<ProdutoBean>();
-		lista.add(new ProdutoBean(1, "Notebook", 2500));
-		lista.add(new ProdutoBean(2, "Celular", 2000));
-		lista.add(new ProdutoBean(3, "Teclado", 250));
+	public List<String> getProdutos() {
+		List<String> lista = new ArrayList<String>();
+		lista.add("Notebook");
+		lista.add("Celular");
+		lista.add("Teclado");
 		return lista;
 	}	
 	public String getQuantidade() {
